@@ -289,25 +289,16 @@ export default function DashboardPage() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <div className="custom-card flex flex-col justify-between">
-            <h2 className="text-lg font-mono font-bold uppercase text-[var(--text-primary)] mb-4">
-              Baseline Emissions Breakdown
-            </h2>
-            <EmissionsBreakdownChart data={{
-              transport: profile.baselineTransport,
-              home: profile.baselineHome,
-              food: profile.baselineFood,
-              goods: profile.baselineGoods
-            }} />
-          </div>
-
-          <div className="custom-card flex flex-col justify-between">
-            <h2 className="text-lg font-mono font-bold uppercase text-[var(--text-primary)] mb-4">
-              Offset Savings Trend (Last 7 Days)
-            </h2>
-            <CarbonSavingsTrendChart activities={activities} />
-          </div>
+        <div className="custom-card flex flex-col justify-between">
+          <h2 className="text-lg font-mono font-bold uppercase text-[var(--text-primary)] mb-4">
+            Baseline Emissions Breakdown
+          </h2>
+          <EmissionsBreakdownChart data={{
+            transport: profile.baselineTransport,
+            home: profile.baselineHome,
+            food: profile.baselineFood,
+            goods: profile.baselineGoods
+          }} />
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
