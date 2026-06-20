@@ -3,6 +3,8 @@ import { cookies } from 'next/headers';
 import { verifyToken } from '@/lib/jwt';
 import { prisma } from '@/lib/db';
 
+export const dynamic = 'force-dynamic';
+
 async function getAuthenticatedUserId() {
   const cookieStore = await cookies();
   const token = cookieStore.get('ecotrack_session')?.value;

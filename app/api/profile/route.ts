@@ -4,6 +4,8 @@ import { verifyToken } from '@/lib/jwt';
 import { prisma } from '@/lib/db';
 import { calculateFootprint, FootprintInputs } from '@/lib/carbon';
 
+export const dynamic = 'force-dynamic';
+
 async function getAuthenticatedUserId() {
   const cookieStore = await cookies();
   const token = cookieStore.get('ecotrack_session')?.value;
